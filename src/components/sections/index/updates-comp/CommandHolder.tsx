@@ -6,7 +6,7 @@ export default function About() {
 
   return (
     <>
-      <section id='about' className="max-w-4xl w-full flex flex-col mx-auto">
+      <section id='about' className="max-w-4xl w-full flex flex-col mx-auto pt-44">
         <motion.h1
           className="text-center font-bold text-5xl mt-16"
           initial={{ transform: 'translateY(-30px)', opacity: 0 }}
