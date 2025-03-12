@@ -15,6 +15,7 @@ export default function Hero({ inView, descRef }: { inView: boolean, descRef: an
           viewport={{ amount: 0.1, once: true }}
           ref={descRef}
         >
+          <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary to-secondary animate-progress"></div>
           <h2 className="font-bold lg:text-7xl md:text-6xl sm:text-5xl text-4xl">
             Hello, I am Noxum<span className="font-bold text-xl brightness-50 italic sm:inline flex"> best bot btw</span>
           </h2>
