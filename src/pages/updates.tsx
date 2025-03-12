@@ -1,6 +1,7 @@
 import { useInView } from 'react-intersection-observer';
 
 import Navbar from "@/components/Navbar";
+import Loader from "@/components/sections/index/updates-comp/Loading";
 import { GridPattern } from "@/components/GridPattern";
 
 export default function Home() {
@@ -22,6 +23,7 @@ export default function Home() {
           className='z-[-5]'
         />
       </main>
+      <Loader percentage={45} />
     </>
   );
 }
