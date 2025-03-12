@@ -6,12 +6,26 @@ import { useEffect, useState } from "react";
 
 export default function About() {
   let frontendTech: Tech[] = [
-    { title: "", icon: <img alt="" draggable={true} className="h-6" src="https://imgur.com/sHbGLC0.png" />, link: "https://discord.gg/UPXtw8PrvZ" }
+    { title: "Noxum", icon: <img alt="" draggable={true} className="h-6" src="https://imgur.com/sHbGLC0.png" />, link: "https://discord.gg/UPXtw8PrvZ" },
+    { title: "Noxum", icon: <img alt="" draggable={true} className="h-6" src="https://imgur.com/sHbGLC0.png" />, link: "https://discord.gg/UPXtw8PrvZ" },
+    { title: "Noxum", icon: <img alt="" draggable={true} className="h-6" src="https://imgur.com/sHbGLC0.png" />, link: "https://discord.gg/UPXtw8PrvZ" },
+    { title: "Noxum", icon: <img alt="" draggable={true} className="h-6" src="https://imgur.com/sHbGLC0.png" />, link: "https://discord.gg/UPXtw8PrvZ" },
+    { title: "Noxum", icon: <img alt="" draggable={true} className="h-6" src="https://imgur.com/sHbGLC0.png" />, link: "https://discord.gg/UPXtw8PrvZ" },
+    { title: "Noxum", icon: <img alt="" draggable={true} className="h-6" src="https://imgur.com/sHbGLC0.png" />, link: "https://discord.gg/UPXtw8PrvZ" },
+    { title: "Noxum", icon: <img alt="" draggable={true} className="h-6" src="https://imgur.com/sHbGLC0.png" />, link: "https://discord.gg/UPXtw8PrvZ" },
   ]
 
   let backendTech: Tech[] = [
     { title: "Judgements", icon: <img alt="" draggable={true} className="h-6" src="https://imgur.com/EHGfp6r.png" />, link: "https://discord.gg/jdg" },
-    { title: "EL", icon: <img alt="" draggable={true} className="h-6" src="https://imgur.com/TmzqdBy.gif" />, link: "https://discord.gg/RUuPQTxt5r" }
+    { title: "EL", icon: <img alt="" draggable={true} className="h-6" src="https://imgur.com/TmzqdBy.gif" />, link: "https://discord.gg/RUuPQTxt5r" },
+    { title: "Judgements", icon: <img alt="" draggable={true} className="h-6" src="https://imgur.com/EHGfp6r.png" />, link: "https://discord.gg/jdg" },
+    { title: "EL", icon: <img alt="" draggable={true} className="h-6" src="https://imgur.com/TmzqdBy.gif" />, link: "https://discord.gg/RUuPQTxt5r" },
+    { title: "Judgements", icon: <img alt="" draggable={true} className="h-6" src="https://imgur.com/EHGfp6r.png" />, link: "https://discord.gg/jdg" },
+    { title: "EL", icon: <img alt="" draggable={true} className="h-6" src="https://imgur.com/TmzqdBy.gif" />, link: "https://discord.gg/RUuPQTxt5r" },
+    { title: "Judgements", icon: <img alt="" draggable={true} className="h-6" src="https://imgur.com/EHGfp6r.png" />, link: "https://discord.gg/jdg" },
+    { title: "EL", icon: <img alt="" draggable={true} className="h-6" src="https://imgur.com/TmzqdBy.gif" />, link: "https://discord.gg/RUuPQTxt5r" },
+    { title: "Judgements", icon: <img alt="" draggable={true} className="h-6" src="https://imgur.com/EHGfp6r.png" />, link: "https://discord.gg/jdg" },
+    { title: "EL", icon: <img alt="" draggable={true} className="h-6" src="https://imgur.com/TmzqdBy.gif" />, link: "https://discord.gg/RUuPQTxt5r" },
   ]
 
   let otherTech: Tech[] = [
@@ -19,6 +33,13 @@ export default function About() {
     { title: "Github", icon: <img alt="" draggable={false} className="h-6" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" />, link: "https://github.com/" },
     { title: "NPM", icon: <img alt="" draggable={false} className="h-6" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/npm/npm-original-wordmark.svg" />, link: "https://www.npmjs.com/" },
     { title: "Visual Studio Code", icon: <img alt="" draggable={false} className="h-6" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" />, link: "https://code.visualstudio.com/" },
+    { title: "DiscordJS", icon: <img alt="" draggable={false} className="h-6" src="https://imgur.com/4OC6TRC.png" />, link: "https://discord.js.org/" },
+    { title: "Vercel", icon: <img alt="" draggable={false} className="h-6" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vercel/vercel-original.svg" />, link: "https://vercel.com/" },
+    { title: "Git", icon: <img alt="" draggable={false} className="h-6" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" />, link: "https://git-scm.com/" },
+    { title: "Github", icon: <img alt="" draggable={false} className="h-6" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" />, link: "https://github.com/" },
+    { title: "NPM", icon: <img alt="" draggable={false} className="h-6" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/npm/npm-original-wordmark.svg" />, link: "https://www.npmjs.com/" },
+    { title: "Visual Studio Code", icon: <img alt="" draggable={false} className="h-6" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" />, link: "https://code.visualstudio.com/" },
+    { title: "DiscordJS", icon: <img alt="" draggable={false} className="h-6" src="https://imgur.com/4OC6TRC.png" />, link: "https://discord.js.org/" },
     { title: "Vercel", icon: <img alt="" draggable={false} className="h-6" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vercel/vercel-original.svg" />, link: "https://vercel.com/" },
   ]
 
@@ -99,7 +120,7 @@ export default function About() {
           />
           <AboutCard
             title="Assistance?"
-            description="Nope, this bot has been fully developed by Valor (@kxyoshii). I have been working on this bot for a while now and I am proud of the progress I have made. I have learned a lot from this project and I am excited to see where it goes in the future."
+            description="Nope, this bot has been fully developed by Valor (@kxyoshii). I have been working on this bot for a while now and I am proud of the progress I have made. I have learned a lot from this project and I am excited to see where it goes in the future. Below you'll find the tech I used to develop this bot."
             tech={otherTech}
             direction="bottom"
             span={presence && presence.activities.length > 0 ? 1 : 2}

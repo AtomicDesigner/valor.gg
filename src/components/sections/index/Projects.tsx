@@ -4,11 +4,11 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 
 export default function Projects() {
-  //set to true by default for now because there aren't enough projects to warrant a show more button
   const [showAll, setShowAll] = useState(true);
 
   return (
     <>
+    {/*
       <section id='projects' className="max-w-4xl w-full flex flex-col mx-auto">
         <motion.h1
           className="text-center font-bold text-5xl mt-16 -mb-2"
@@ -89,6 +89,7 @@ export default function Projects() {
           />
         </ul>
       </section>
+      */}
     </>
   );
 }
