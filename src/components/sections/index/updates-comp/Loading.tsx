@@ -18,7 +18,7 @@ export default function Hero({ inView, descRef }: { inView: boolean, descRef: an
           <h2 className="font-bold lg:text-7xl md:text-6xl sm:text-5xl text-4xl">
         Next Update Progress:
           </h2>
-            <div className="mt-6 w-full bg-gray-700 rounded-full h-4 relative">
+            <div className="mt-6 w-full bg-gray-700 rounded-full h-4 relative bg-gradient-to-br from-primary to to-secondary rounded-lg border-1 border-accent shadow-2xl shadow-background">
               <div
               className="bg-gradient-to-r from-primary to-secondary h-4 rounded-full"
               style={{ width: `${perc}%` }}
