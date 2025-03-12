@@ -42,42 +42,6 @@ export default function About() {
     { title: "Vercel", icon: <img alt="" draggable={false} className="h-6" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vercel/vercel-original.svg" />, link: "https://vercel.com/" },
   ]
 
-  const [presence, setPresence] = useState<Presence | null>(null);
-  const [date, setDate] = useState(new Date());
-
-  useEffect(() => {
-    const socket = new WebSocket(`wss://api.aiden.gg/presence`)
-  
-    const handleOpen = () => {
-      socket.send("Connection established")
-    }
-  
-    const handleMessage = (event: MessageEvent) => {
-      if (event.data === "connected") return
-      if (event.data === "pong") return
-      setPresence(JSON.parse(event.data))
-    }
-
-    let ping = setInterval(() => {
-      socket.send("ping")
-    }, 10000)
-  
-    socket.addEventListener("open", handleOpen)
-    socket.addEventListener("message", handleMessage)
-  
-    const timer = setInterval(() => {
-      setDate(new Date())
-    }, 1000)
-  
-    return () => {
-      socket.removeEventListener("open", handleOpen)
-      socket.removeEventListener("message", handleMessage)
-      socket.close()
-      clearInterval(ping)
-      clearInterval(timer)
-    }
-  }, [])
-
   return (
     <>
       <section id='about' className="max-w-4xl w-full flex flex-col mx-auto">
@@ -122,7 +86,7 @@ export default function About() {
             description="Nope, this bot has been fully developed by Valor (@kxyoshii). I have been working on this bot for a while now and I am proud of the progress I have made. I have learned a lot from this project and I am excited to see where it goes in the future. Below you'll find the tech I used to develop this bot."
             tech={otherTech}
             direction="bottom"
-            span={presence && presence.activities.length > 0 ? 1 : 2}
+            span={1}
             delay={0.1}
             gradient="bg-gradient-to-tr"
           />
