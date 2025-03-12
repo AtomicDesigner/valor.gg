@@ -1,7 +1,6 @@
 import AboutCard from "@/components/AboutCard";
 import { Presence, Tech } from "../../../../typings";
 import { motion } from "framer-motion";
-import PresenceCard from "@/components/PresenceCard";
 import { useEffect, useState } from "react";
 
 export default function About() {
@@ -43,38 +42,42 @@ export default function About() {
     { title: "Vercel", icon: <img alt="" draggable={false} className="h-6" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vercel/vercel-original.svg" />, link: "https://vercel.com/" },
   ]
 
-  const [presence, setPresence] = useState<any>(null);
+  const [presence, setPresence] = useState<Presence | null>(null);
   const [date, setDate] = useState(new Date());
-  
+
   useEffect(() => {
-    const socket = new WebSocket("wss://api.lanyard.rest/socket");
+    const socket = new WebSocket(`wss://api.aiden.gg/presence`)
+  
+    const handleOpen = () => {
+      socket.send("Connection established")
+    }
   
     const handleMessage = (event: MessageEvent) => {
-      const data = JSON.parse(event.data);
+      if (event.data === "connected") return
+      if (event.data === "pong") return
+      setPresence(JSON.parse(event.data))
+    }
+
+    let ping = setInterval(() => {
+      socket.send("ping")
+    }, 10000)
   
-      if (data.op === 0) {
-        setPresence(data.d);
-      }
-  
-      // Send heartbeat every 30 seconds
-      if (data.op === 1) {
-        socket.send(JSON.stringify({ op: 2, d: { subscribe_to_id: "376769581093617665" } }));
-      }
-    };
-  
-    socket.addEventListener("message", handleMessage);
+    socket.addEventListener("open", handleOpen)
+    socket.addEventListener("message", handleMessage)
   
     const timer = setInterval(() => {
-      setDate(new Date());
-    }, 1000);
+      setDate(new Date())
+    }, 1000)
   
     return () => {
-      socket.removeEventListener("message", handleMessage);
-      socket.close();
-      clearInterval(timer);
-    };
-  }, []);
-  
+      socket.removeEventListener("open", handleOpen)
+      socket.removeEventListener("message", handleMessage)
+      socket.close()
+      clearInterval(ping)
+      clearInterval(timer)
+    }
+  }, [])
+
   return (
     <>
       <section id='about' className="max-w-4xl w-full flex flex-col mx-auto">
@@ -119,17 +122,9 @@ export default function About() {
             description="Nope, this bot has been fully developed by Valor (@kxyoshii). I have been working on this bot for a while now and I am proud of the progress I have made. I have learned a lot from this project and I am excited to see where it goes in the future. Below you'll find the tech I used to develop this bot."
             tech={otherTech}
             direction="bottom"
-            span={1}
+            span={presence && presence.activities.length > 0 ? 1 : 2}
             delay={0.1}
             gradient="bg-gradient-to-tr"
-          />
-          <PresenceCard
-            presence={presence}
-            date={date}
-            direction="top"
-            span={2}
-            delay={0.1}
-            gradient="bg-gradient-to-tl"
           />
         </ul>
       </section>
