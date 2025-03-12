@@ -9,11 +9,11 @@ const AnimatedChecklist = () => {
       {
         category: "ModMail System",
         tasks: [
-          { name: "Set up basic ModMail functionality", checked: true },
-          { name: "Create ticket system for user inquiries", checked: true },
+          { name: "Set up basic ModMail functionality", checked: false },
+          { name: "Create ticket system for user inquiries", checked: false },
           { name: "Implement message logging", checked: false },
-          { name: "Add auto-response features", checked: true },
-          { name: "Set up staff notification system", checked: true },
+          { name: "Add auto-response features", checked: false },
+          { name: "Set up staff notification system", checked: false },
         ],
       },
       {
@@ -48,28 +48,24 @@ const AnimatedChecklist = () => {
       },
     ];
   
-    // Initialize state based on the checklist data
     const [checklistState, setChecklistState] = useState(checklist);
   
-    // Example script-based update function
     useEffect(() => {
       setTimeout(() => {
         setChecklistState((prevState) => {
           const newState = [...prevState];
-          // Check the 3rd task in "ModMail System" after 2 seconds
           newState[0].tasks[2].checked = true;
           return newState;
         });
-      }, 2000); // 2 seconds delay
+      }, 2000);
   
       setTimeout(() => {
         setChecklistState((prevState) => {
           const newState = [...prevState];
-          // Check the 4th task in "Tryout Results" after another 2 seconds
           newState[3].tasks[3].checked = true;
           return newState;
         });
-      }, 4000); // 4 seconds delay
+      }, 2000);
     }, []);
   
     return (
@@ -92,9 +88,9 @@ const AnimatedChecklist = () => {
             </h2>
             {checklistState.map((section, sectionIndex) => (
               <div key={sectionIndex} className="space-y-4">
-                <h3 className="font-bold text-xl text-gray-800 dark:text-gray-200">
+                <h2 className="font-bold text-xl text-gray-800 dark:text-gray-200">
                   {section.category}
-                </h3>
+                </h2>
                 {section.tasks.map((task, index) => (
                   <motion.div
                     key={index}
