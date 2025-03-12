@@ -26,9 +26,6 @@ export default function Home() {
         <Loader inView={inView} descRef={ref} />
         <AnimatedChecklist />
       </main>
-      <div className="mx-auto pt-10 space-y-56">
-        hello
-      </div>
     </>
   );
 }
