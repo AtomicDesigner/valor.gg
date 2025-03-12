@@ -15,14 +15,6 @@ export default function Hero({ inView, descRef }: { inView: boolean, descRef: an
           viewport={{ amount: 0.1, once: true }}
           ref={descRef}
         >
-          <div className="w-full h-2 mb-4 bg-red-500 rounded-full overflow-hidden">
-            <motion.div
-              className="h-full bg-green-500"
-              initial={{ width: 0 }}
-              animate={{ width: "100%" }}
-              transition={{ duration: 60, ease: "linear" }}
-            />
-          </div>
           <h2 className="font-bold lg:text-7xl md:text-6xl sm:text-5xl text-4xl">
             Hello, I am Noxum<span className="font-bold text-xl brightness-50 italic sm:inline flex"> best bot btw</span>
           </h2>
