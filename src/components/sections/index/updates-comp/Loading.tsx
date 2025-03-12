@@ -35,9 +35,14 @@ export default function Hero({
               animate={{ width: `${perc}%` }}
               transition={{ duration: 1 }}
             ></motion.div>
-            <span className="absolute left-1/2 transform -translate-x-1/2 mt-1 text-white font-bold">
+            <motion.span
+              className="absolute left-1/2 transform -translate-x-1/2 mt-1 text-white font-bold"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 1 }}
+            >
               {perc}%
-            </span>
+            </motion.span>
           </div>
         </motion.div>
       </section>
