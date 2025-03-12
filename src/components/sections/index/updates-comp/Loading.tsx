@@ -29,10 +29,14 @@ export default function Hero({ inView, descRef }: { inView: boolean, descRef: an
               className="mt-4 p-2 border rounded"
               placeholder="Enter percentage"
               onChange={(e) => {
-              perc = Number(e.target.value);
+                perc = Number(e.target.value);
               const progressBar = document.querySelector('.bg-white');
               if (progressBar) {
-                (progressBar as HTMLElement).style.width = `${perc}%`;
+              progressBar.animate(
+                [{ width: (progressBar as HTMLElement).style.width }, { width: `${perc}%` }],
+                { duration: 500, fill: 'forwards', easing: 'ease-in-out' }
+              );
+              (progressBar as HTMLElement).style.width = `${perc}%`;
               }
               }}
             />
