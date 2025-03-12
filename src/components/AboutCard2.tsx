@@ -6,7 +6,7 @@ import { Tech } from "../../typings";
 
 export default function AboutCard({
   title,
-  description, // Now an array of command objects
+  description,
   tech,
   direction,
   span,
@@ -14,7 +14,7 @@ export default function AboutCard({
   delay,
 }: {
   title: string;
-  description: { command: string; description: string }[]; // Update to array of objects
+  description: { command: string; description: string }[];
   tech?: Tech[];
   direction: "top" | "bottom" | "left" | "right";
   span: 1 | 2;
@@ -50,7 +50,6 @@ export default function AboutCard({
       >
         <h2 className="text-center font-semibold text-4xl">{title}</h2>
 
-        {/* Render the list of commands */}
         <ul className="space-y-2 mt-4">
           {description.map((item, index) => (
             <li key={index} className="text-xl">
