@@ -23,7 +23,7 @@ const AnimatedChecklist = () => {
       ],
     },
     {
-      category: "Help Command",
+      category: "Help Commands",
       tasks: [
         { name: "Commands will be in the website.", checked: false },
       ],
@@ -33,9 +33,7 @@ const AnimatedChecklist = () => {
       tasks: [
         { name: "Set up role assignment system", checked: false },
         { name: "Create results tracking database", checked: false },
-        { name: "Implement feedback mechanism", checked: false },
         { name: "Add automated notifications", checked: false },
-        { name: "Create summary reports", checked: false },
       ],
     },
   ];
@@ -46,22 +44,20 @@ const AnimatedChecklist = () => {
     setTimeout(() => {
       setChecklistState((prevState) => {
         const newState = [...prevState];
-        newState[0].tasks[0].checked = false;
+        newState[0].tasks[0].checked = true;
         newState[0].tasks[1].checked = true;
         newState[0].tasks[2].checked = true;
-        newState[0].tasks[3].checked = false;
+        newState[0].tasks[3].checked = true;
         newState[1].tasks[0].checked = true;
         newState[1].tasks[1].checked = true;
         newState[1].tasks[2].checked = true;
-        newState[2].tasks[0].checked = true;
-        newState[3].tasks[0].checked = true;
-        newState[3].tasks[1].checked = true;
-        newState[3].tasks[2].checked = true;
-        newState[3].tasks[3].checked = true;
-        newState[3].tasks[4].checked = false;
+        newState[2].tasks[0].checked = false;
+        newState[3].tasks[0].checked = false;
+        newState[3].tasks[1].checked = false;
+        newState[3].tasks[2].checked = false;
         return newState;
       });
-    }, 2000);
+    }, 500);
   }, []);
 
   return (
