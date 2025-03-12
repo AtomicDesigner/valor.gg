@@ -86,7 +86,7 @@ export default function About() {
             description="Nope, this bot has been fully developed by Valor (@kxyoshii). I have been working on this bot for a while now and I am proud of the progress I have made. I have learned a lot from this project and I am excited to see where it goes in the future. Below you'll find the tech I used to develop this bot."
             tech={otherTech}
             direction="bottom"
-            span={1}
+            span={2}
             delay={0.1}
             gradient="bg-gradient-to-tr"
           />
