@@ -23,7 +23,10 @@ export default function Home() {
           className='z-[-5]'
         />
       </main>
-      <Loader percentage={45} />
+      <Loader 
+        inView={inView} 
+        descRef={ref} 
+      />
     </>
   );
 }
