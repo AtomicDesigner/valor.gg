@@ -43,9 +43,11 @@ export default function Navbar() {
                             <button onClick={handleClickScroll2} className="p-2 duration-300 text-lg font-medium hover:bg-secondary rounded-md">
                                 Credits
                             </button>
-                            <button onClick={handleClickScroll2} disabled={true} className="p-2 duration-300 text-lg font-medium hover:bg-secondary rounded-md disabled:cursor-not-allowed">
-                                Bot Updates
-                            </button>
+                            <Link href="/updates.tsx"></Link>
+                                <button className="p-2 duration-300 text-lg font-medium hover:bg-secondary rounded-md">
+                                    Bot Updates
+                                </button>
+                            </Link>
                             <button onClick={handleClickScroll} disabled={true} className="p-2 duration-300 text-lg font-medium hover:bg-secondary rounded-md disabled:cursor-not-allowed">
                                 Commands
                             </button>
