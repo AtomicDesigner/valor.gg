@@ -1,6 +1,7 @@
 import { useInView } from 'react-intersection-observer';
 
 import Navbar from "@/components/Navbar";
+import CommandHolder from "@/components/sections/index/updates-comp/CommandHolder";
 import { GridPattern } from "@/components/GridPattern";
 
 export default function Home() {
@@ -21,6 +22,7 @@ export default function Home() {
           y={-1}
           className='z-[-5]'
         />
+        <CommandHolder />
       </main>
     </>
   );
