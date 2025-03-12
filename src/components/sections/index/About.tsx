@@ -95,7 +95,7 @@ export default function About() {
         <ul className="grid grid-cols-2 gap-4 mt-4">
           <AboutCard
             title="About Noxum"
-            description="Noxum is the ultimate Discord bot for anything related to clanning in The Strongest Battlegrounds. Whether you're forming a new clan, managing current members, or organizing events, Noxum has you covered with its powerful features and seamless integration. It allows you to effortlessly create and manage clans, assign roles, track stats, and even handle recruitment and promotions. With Noxum, clan leaders can easily organize battles, communicate with members, and enhance the overall experience for everyone involved. Its intuitive commands, efficient moderation tools, and customizability make Noxum the go-to bot for players who want to elevate their clanning experience in The Strongest Battlegrounds."
+            description="Noxum is the ultimate Discord bot for anything related to clanning in The Strongest Battlegrounds. Whether you're forming a new clan, managing current members, or organizing events, Noxum has you covered with its powerful features and seamless integration. It allows you to effortlessly create and manage clans, assign roles, track stats, and even handle recruitment and promotions."
             direction="top"
             span={2}
             delay={0.1}
@@ -103,7 +103,7 @@ export default function About() {
           />
           <AboutCard
             title="You ask, why Noxum?"
-            description="Noxum stands out as the best choice for clanning in The Strongest Battlegrounds because it’s specifically designed to streamline every aspect of clan management. Whether you’re a seasoned clan leader or a new member, Noxum’s intuitive commands and powerful features make organizing, communicating, and managing your clan easy. From automatic stat tracking and seamless recruitment to event coordination and role management, Noxum has it all. It’s customizable to fit your needs and ensures a smooth, engaging experience for all members. Simply put, if you want a bot that enhances your clanning experience in The Strongest Battlegrounds, Noxum is the only choice."
+            description="Noxum stands out as the best choice for clanning in The Strongest Battlegrounds because it’s specifically designed to streamline every aspect of clan management. Whether you’re a seasoned clan leader or a new member, Noxum’s intuitive commands and powerful features make organizing, communicating, and managing your clan easy."
             tech={frontendTech}
             direction="left"
             span={1}

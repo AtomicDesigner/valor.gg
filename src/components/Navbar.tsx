@@ -44,11 +44,6 @@ export default function Navbar() {
                                 Experience
                             </button>
                         </div>
-                        <div className="min-[330px]:flex hidden flex-row gap-2 items-center">
-                            <Link draggable={false} href="https://github.com/aidendotgg/aiden.gg" target="_blank" className="p-2 duration-300 text-lg font-medium hover:bg-secondary rounded-md">
-                                Source
-                            </Link>
-                        </div>
                     </div>
                 </nav>
             </motion.header>
