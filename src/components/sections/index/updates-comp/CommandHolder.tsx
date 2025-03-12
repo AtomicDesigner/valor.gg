@@ -1,6 +1,7 @@
 import AboutCard2 from "@/components/AboutCard2";
 import AboutCard from "@/components/AboutCard";
 import AboutCardTW from "@/components/AboutCardTW";
+import ProjectCard from "@/components/ProjectCard";
 import Typewriter from 'typewriter-effect';
 import { motion } from "framer-motion";
 
@@ -58,38 +59,49 @@ export default function About() {
             gradient="bg-gradient-to-br"
           />
           <AboutCard2
-            title="Clanning"
-            description={[
-                { command: "/result [user] [stage] [level] [range]", description: "Displays the result of a recent tryout conducted with the specified person." },
-                { command: "/msg [message] [reply](optional)", description: "Makes the bot say whatever you want." },
-                { command: "/vouch [user]", description: "Gives a vouch to the specified user." },
-                { command: "/vouches [user]", description: "Displays the number of vouches a user has received." },
-                { command: "/clr vouches [user]", description: "Clears all vouches for the specified user." },
-                { command: "/nuke", description: "Nukes the server. (Troll Message, it's harmless lol.)" }
-            ]}
-            direction="top"
-            span={1}
-            delay={0.2}
-            gradient="bg-gradient-to-bl"
-          />
-          <AboutCard2
             title="Setup"
             description={[
-                { command: "/setup channels", description: "Configures the necessary channels for the server's functionality." },
-                { command: "/setup ver", description: "Sets up the verification ticket for the server. (Must be in a proper verification channel to run this command.)" },
-                { command: "/setup ticket", description: "Configures the ticket system for user support." },
-                { command: "/reassign verify [role]", description: "Reassigns the verification role to a different role." },
-                { command: "/reassign verify channel [channel]", description: "Reassigns the verification channel to a different channel." },
-                { command: "/reassign welcome channel [channel]", description: "Reassigns the welcome channel to a different channel." },
-                { command: "/reassign vouch channel [channel]", description: "Reassigns the vouch channel to a different channel." },
-                { command: "/reassign unverify", description: "Reassigns the unverify role to a different role." },
-                { command: "/reassign vouch", description: "Reassigns the vouch role to a different role." },
-                { command: "/add mod", description: "Adds a role to the moderator database." }
+              { command: "/setup channels", description: "Configures the necessary channels for the server's functionality." },
+              { command: "/setup ver", description: "Sets up the verification ticket for the server. (Must be in a proper verification channel to run this command.)" },
+              { command: "/setup ticket", description: "Configures the ticket system for user support." },
+              { command: "/reassign verify [role]", description: "Reassigns the verification role to a different role." },
+              { command: "/reassign verify channel [channel]", description: "Reassigns the verification channel to a different channel." },
+              { command: "/reassign welcome channel [channel]", description: "Reassigns the welcome channel to a different channel." },
+              { command: "/reassign vouch channel [channel]", description: "Reassigns the vouch channel to a different channel." },
+              { command: "/reassign unverify", description: "Reassigns the unverify role to a different role." },
+              { command: "/reassign vouch", description: "Reassigns the vouch role to a different role." },
+              { command: "/add mod", description: "Adds a role to the moderator database." },
+              { command: "/blank cmd", description: "Blank description" },
+              { command: "/blank cmd", description: "Blank description" },
+              { command: "/blank cmd", description: "Blank description" },
+              { command: "/blank cmd", description: "Blank description" },
+              { command: "/blank cmd", description: "Blank description" },
+              { command: "/blank cmd", description: "Blank description" },
+              { command: "/blank cmd", description: "Blank description" },
+              { command: "/blank cmd", description: "Blank description" },
+              { command: "/blank cmd", description: "Blank description" },
+              { command: "/blank cmd", description: "Blank description" },
+              { command: "/blank cmd", description: "Blank description" }
             ]}
             direction="top"
             span={1}
             delay={0.1}
             gradient="bg-gradient-to-tr"
+          />
+          <AboutCard2
+            title="Clanning"
+            description={[
+              { command: "/result [user] [stage] [level] [range]", description: "Displays the result of a recent tryout conducted with the specified person." },
+              { command: "/msg [message] [reply](optional)", description: "Makes the bot say whatever you want." },
+              { command: "/vouch [user]", description: "Gives a vouch to the specified user." },
+              { command: "/vouches [user]", description: "Displays the number of vouches a user has received." },
+              { command: "/clr vouches [user]", description: "Clears all vouches for the specified user." },
+              { command: "/nuke", description: "Nukes the server. (Troll Message, it's harmless lol.)" }
+            ]}
+            direction="top"
+            span={1}
+            delay={0.2}
+            gradient="bg-gradient-to-bl"
           />
           <AboutCard2
             title="Admin"
@@ -107,7 +119,7 @@ export default function About() {
             description={
                 <Typewriter
                 options={{
-                    delay: 20,
+                    delay: 12,
                     strings: [
                     "Noxum ModMail is here to make sure no one feels unheard. If you ever need help, have a question, or want to talk to staff privately, just send a DM to Noxum. It’ll automatically open a support ticket, letting our team respond quickly and keep everything organized. No stress, no confusion — just simple, direct help when you need it."
                     ],
@@ -123,6 +135,22 @@ export default function About() {
             gradient="bg-gradient-to-tl"
             />
         </ul>
+        <ProjectCard
+            title="Noxem ModMail"
+            fullDescription={[
+              "Noxum ModMail is a newly made Ticket System for Discord servers. It allows users to create tickets by DMing the bot and staff to respond to them.",
+              "This took me a minute to make, but it's finally done.",
+            ]}
+            cardImage="https://imgur.com/9NjGpXM.png"
+            cardDescription="Hell yea"
+            media={[
+              "https://imgur.com/tO18xi6.mp4"
+            ]}
+            myRole="Creator"
+            timeline="February 2025 - Present"
+            delay={0.1}
+            gradient="bg-gradient-to-t"
+          />
       </section>
     </>
   );
