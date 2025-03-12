@@ -1,4 +1,6 @@
 import { motion } from "framer-motion";
+import { useEffect } from "react";
+
 let perc: number = 35;
 
 export default function Hero({ inView, descRef }: { inView: boolean, descRef: any }) {
@@ -17,14 +19,23 @@ export default function Hero({ inView, descRef }: { inView: boolean, descRef: an
         Next bot update status:
           </h2>
             <div className="mt-6 w-full bg-gray-700 rounded-full h-4 bg-gradient-to-r from-primary to-secondary rounded-lg border-1 border-accent shadow-2xl shadow-background relative">
-            <div
+              <div
               className="bg-white h-4 rounded-full"
               style={{ width: `${inView ? `${perc}%` : '0%'}` }}
-            ></div>
-            <div className="absolute top-0 left-[75%] transform -translate-x-1/2 bg-white text-black px-2 py-1 rounded-full shadow-md">
-              {inView ? `${perc}%` : '0%'}
+              ></div>
             </div>
-            </div>
+            <input
+              type="number"
+              className="mt-4 p-2 border rounded"
+              placeholder="Enter percentage"
+              onChange={(e) => {
+              perc = Number(e.target.value);
+              const progressBar = document.querySelector('.bg-white');
+              if (progressBar) {
+                (progressBar as HTMLElement).style.width = `${perc}%`;
+              }
+              }}
+            />
         </motion.div>
       </section>
     </>
