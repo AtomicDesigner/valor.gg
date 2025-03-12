@@ -52,7 +52,7 @@ export default function Navbar() {
                                     Commands
                                 </button>
                             </Link>
-                            <Link href="/commands">
+                            <Link href="https://discord.com/oauth2/authorize?client_id=1342635971849748521&permissions=8&integration_type=0&scope=bot">
                                 <button className="p-2 duration-300 text-lg font-medium hover:bg-secondary rounded-md">
                                     Invite Bot
                                 </button>

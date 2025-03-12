@@ -4,72 +4,65 @@ import { motion } from "framer-motion";
 const AnimatedChecklist = () => {
     const descRef = useRef(null);
   
-    // Define categories and tasks with initial checked states
     const checklist = [
       {
         category: "ModMail System",
         tasks: [
-          { name: "Set up basic ModMail functionality", checked: true },
-          { name: "Create ticket system for user inquiries", checked: true },
-          { name: "Implement message logging", checked: false },
-          { name: "Add auto-response features", checked: true },
-          { name: "Set up staff notification system", checked: true },
+          { name: "Set up basic ModMail functionality", checked: false },
+          { name: "Create ticket system for user inquiries", checked: false },
+          { name: "Add auto-response features", checked: false },
+          { name: "Set up staff notification system", checked: false },
         ],
       },
       {
         category: "Cases Pages",
         tasks: [
-          { name: "Design case template structure", checked: true },
-          { name: "Implement case tracking system", checked: true },
-          { name: "Create case status updates", checked: true },
-          { name: "Add case assignment features", checked: true },
-          { name: "Set up case archiving system", checked: true },
+          { name: "Design case template structure", checked: false },
+          { name: "Implement case tracking system", checked: false },
+          { name: "Create case status updates", checked: false },
         ],
       },
       {
         category: "Help Command",
         tasks: [
-          { name: "Create basic help menu structure", checked: true },
-          { name: "Write command documentation", checked: true },
-          { name: "Implement category system", checked: true },
-          { name: "Add search functionality", checked: true },
-          { name: "Create interactive help guides", checked: true },
+          { name: "Commands will be in the website.", checked: false },
         ],
       },
       {
         category: "Tryout Results",
         tasks: [
-          { name: "Set up role assignment system", checked: true },
-          { name: "Create results tracking database", checked: true },
-          { name: "Implement feedback mechanism", checked: true },
+          { name: "Set up role assignment system", checked: false },
+          { name: "Create results tracking database", checked: false },
+          { name: "Implement feedback mechanism", checked: false },
           { name: "Add automated notifications", checked: false },
-          { name: "Create summary reports", checked: true },
+          { name: "Create summary reports", checked: false },
         ],
       },
     ];
   
-    // Initialize state based on the checklist data
     const [checklistState, setChecklistState] = useState(checklist);
   
-    // Set all tasks as checked immediately
     useEffect(() => {
-      setChecklistState((prevState) => {
-        const newState = [...prevState];
-        newState.forEach((category) => {
-          category.tasks.forEach((task) => {
-            task.checked = true;
-          });
+      setTimeout(() => {
+        setChecklistState((prevState) => {
+          const newState = [...prevState];
+          newState[0].tasks[0].checked = false;
+          newState[0].tasks[1].checked = true;
+          newState[0].tasks[2].checked = true;
+          newState[0].tasks[3].checked = false;
+          newState[1].tasks[0].checked = true;
+          newState[1].tasks[1].checked = true;
+          newState[1].tasks[2].checked = true;
+          newState[2].tasks[0].checked = true;
+          newState[3].tasks[0].checked = true;
+          newState[3].tasks[1].checked = true;
+          newState[3].tasks[2].checked = true;
+          newState[3].tasks[3].checked = true;
+          newState[3].tasks[4].checked = false;
+          return newState;
         });
-        return newState;
-      });
+      }, 2000);
     }, []);
-  
-    // Toggle the checked state of a task
-    const toggleCheck = (categoryIndex: number, taskIndex: number) => {
-      const newChecklist = [...checklistState];
-      newChecklist[categoryIndex].tasks[taskIndex].checked = !newChecklist[categoryIndex].tasks[taskIndex].checked;
-      setChecklistState(newChecklist);
-    };
   
     return (
       <section className="max-w-4xl w-full flex flex-col mx-auto pt-44">
@@ -90,7 +83,8 @@ const AnimatedChecklist = () => {
               Checklist:
             </h2>
             {checklistState.map((section, sectionIndex) => (
-              <div key={sectionIndex} className="space-y-4">
+              <div key={sectionIndex} className="space-y-4">\
+              <br />
                 <h3 className="font-bold text-xl text-gray-800 dark:text-gray-200">
                   {section.category}
                 </h3>
@@ -102,10 +96,8 @@ const AnimatedChecklist = () => {
                     transition={{ delay: index * 0.1 }}
                     className="flex items-center space-x-3 p-2 bg-gradient-to-br from-primary to to-secondary rounded-lg border-1 border-accent shadow-2xl shadow-background"
                   >
-                    {/* Custom checkbox */}
                     <motion.div
-                      className="w-6 h-6 flex items-center justify-center border-2 border-gray-600 dark:border-gray-400 rounded-md cursor-pointer"
-                      onClick={() => toggleCheck(sectionIndex, index)}
+                      className="w-6 h-6 flex items-center justify-center border-2 border-gray-600 dark:border-gray-400 rounded-md"
                       initial={{ scale: 0 }}
                       animate={{ scale: task.checked ? 1 : 0 }}
                       transition={{ duration: 0.3 }}
