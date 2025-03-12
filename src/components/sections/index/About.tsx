@@ -94,16 +94,16 @@ export default function About() {
         </motion.h1>
         <ul className="grid grid-cols-2 gap-4 mt-4">
           <AboutCard
-            title="About me"
-            description="Yeah so im valor i am super sigma i code from time to time and i like to play games and stuff. Most games i play are black ops 6 and roblox, nothing else otherwise other niggas will start judging me for what i enjoy doing cuz they weird as hell bru gtfo ts pmo rn icl.. 💔💔💔💔"
+            title="About Noxum"
+            description="Noxum is the ultimate Discord bot for anything related to clanning in The Strongest Battlegrounds. Whether you're forming a new clan, managing current members, or organizing events, Noxum has you covered with its powerful features and seamless integration. It allows you to effortlessly create and manage clans, assign roles, track stats, and even handle recruitment and promotions. With Noxum, clan leaders can easily organize battles, communicate with members, and enhance the overall experience for everyone involved. Its intuitive commands, efficient moderation tools, and customizability make Noxum the go-to bot for players who want to elevate their clanning experience in The Strongest Battlegrounds."
             direction="top"
             span={2}
             delay={0.1}
             gradient="bg-gradient-to-tl"
           />
           <AboutCard
-            title="Why am I sigma?"
-            description="Brodie i just am.. dont ever ask questions like this again ok? daddy will get mad."
+            title="You ask, why Noxum?"
+            description="Noxum stands out as the best choice for clanning in The Strongest Battlegrounds because it’s specifically designed to streamline every aspect of clan management. Whether you’re a seasoned clan leader or a new member, Noxum’s intuitive commands and powerful features make organizing, communicating, and managing your clan easy. From automatic stat tracking and seamless recruitment to event coordination and role management, Noxum has it all. It’s customizable to fit your needs and ensures a smooth, engaging experience for all members. Simply put, if you want a bot that enhances your clanning experience in The Strongest Battlegrounds, Noxum is the only choice."
             tech={frontendTech}
             direction="left"
             span={1}
@@ -111,8 +111,12 @@ export default function About() {
             gradient="bg-gradient-to-br"
           />
           <AboutCard
-            title="Bla bla"
-            description="ur a gooner"
+            title="Clans I'm in"
+            description=" Judgements
+                          A highly competitive and strategic clan focused on dominating the battlegrounds. Judgements thrives on skilled coordination and strong leadership, pushing members to excel and rise to the top. The clan values precision and teamwork, ensuring that each member contributes to its overall success.
+                          
+                          Ethereal Legion
+                          A clan built around community and loyalty, Ethereal Legion is dedicated to fostering a supportive environment for all its members. With a focus on growth and cooperation, this clan thrives on strong relationships and mutual respect. Members work together to conquer challenges and elevate the overall power of the Legion."
             tech={backendTech}
             direction="right"
             span={1}
@@ -121,7 +125,7 @@ export default function About() {
           />
           <AboutCard
             title="Hobbies"
-            description="Idk bro gaming and other goated stuff like scripting and doxxing (joke). i am the best tsb player of all time dont @ me."
+            description="Idk bro gaming and other goated stuff like scripting on roblox and doxxing (joke). i am the best tsb player of all time dont @ me."
             tech={otherTech}
             direction="bottom"
             span={presence && presence.activities.length > 0 ? 1 : 2}
