@@ -38,25 +38,6 @@ export default function Hero({
             </span>
           </div>
         </motion.div>
-        <ul className="mt-6 space-y-4">
-          {["Design", "Development", "Testing", "Deployment"].map(
-            (item, index) => (
-              <motion.li
-                key={index}
-                className="flex items-center space-x-3"
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.5, delay: 0.2 * index }}
-                viewport={{ amount: 0.1, once: true }}
-              >
-                <span className="bg-white h-4 w-4 rounded-full flex items-center justify-center">
-                  <span className="bg-green-500 h-2 w-2 rounded-full"></span>
-                </span>
-                <span className="text-white font-medium">{item}</span>
-              </motion.li>
-            )
-          )}
-        </ul>
       </section>
     </>
   );
