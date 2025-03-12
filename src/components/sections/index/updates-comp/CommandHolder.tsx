@@ -3,7 +3,7 @@ import AboutCard from "@/components/AboutCard";
 import Typewriter from 'typewriter-effect';
 import { motion } from "framer-motion";
 
-export default function About({ inView, descRef }: { inView: boolean, descRef: any })  {
+export default function About() {
   return (
     <>
       <section id="about" className="max-w-4xl w-full flex flex-col mx-auto pt-44">
@@ -111,7 +111,6 @@ export default function About({ inView, descRef }: { inView: boolean, descRef: a
                 
           />
             <p className="font-semibold lg:text-3xl md:text-2xl sm:text-xl text-lg">
-            {inView &&
               <Typewriter
                 options={{
                   delay: 20,
@@ -120,10 +119,10 @@ export default function About({ inView, descRef }: { inView: boolean, descRef: a
                   autoStart: true,
                   deleteSpeed: 604800000,
                 }}
-              />}
+              />
           </p>
         </ul>
       </section>
     </>
   );
-}
+};
