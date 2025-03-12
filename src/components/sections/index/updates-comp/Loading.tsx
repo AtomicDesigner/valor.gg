@@ -20,8 +20,8 @@ export default function Hero({ inView, descRef }: { inView: boolean, descRef: an
               className="bg-white h-4 rounded-full"
               style={{ width: `${inView ? '75%' : '0%'}` }}
             ></div>
-            <div className="absolute top-[-30px] left-[calc(75%-1rem)] bg-white text-black px-2 py-1 rounded-full shadow-md">
-              75%
+            <div className="absolute top-[-30px] left-[calc(37.5%)] transform -translate-x-1/2 bg-white text-black px-2 py-1 rounded-full shadow-md">
+              {inView ? '75%' : '0%'}
             </div>
             </div>
         </motion.div>
