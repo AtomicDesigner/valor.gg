@@ -19,7 +19,7 @@ export default function Experience() {
                 </motion.h1>
                 <ul className={`flex flex-col pt-6 pb-1 gap-4 overflow-hidden`}>
                     <ExperienceCard
-                        url="https://discord.gg/judgements"
+                        url="https://discord.gg/UPXtw8PrvZ"
                         title="The Sigma Valor"
                         fullDescription={[
                             "In this game, I consistently outperform others with my strategic thinking, skill, and dedication. I have a strong understanding of the game's mechanics and am able to adapt to new situations quickly. I am also able to work well with others and communicate effectively to achieve our goals.",

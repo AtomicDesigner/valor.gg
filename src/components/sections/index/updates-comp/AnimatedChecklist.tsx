@@ -93,7 +93,11 @@ const AnimatedChecklist = () => {
                   className="flex items-center space-x-3 p-2 bg-gradient-to-br from-primary to to-secondary rounded-lg border-1 border-accent shadow-2xl shadow-background"
                 >
                   <motion.div
-                    className="w-6 h-6 flex items-center justify-center border-2 border-gray-600 dark:border-gray-400 rounded-md"
+                    className="w-8 h-8 flex items-center justify-center border-2 rounded-full transition-colors duration-300 ease-in-out"
+                    style={{
+                      borderColor: task.checked ? '#4CAF50' : '#BDBDBD',
+                      backgroundColor: task.checked ? '#4CAF50' : 'transparent',
+                    }}
                     initial={{ scale: 0 }}
                     animate={{ scale: task.checked ? 1 : 0 }}
                     transition={{ duration: 0.3 }}
@@ -104,7 +108,7 @@ const AnimatedChecklist = () => {
                         fill="none"
                         viewBox="0 0 24 24"
                         stroke="currentColor"
-                        className="w-4 h-4 text-green-500"
+                        className="w-5 h-5 text-white"
                         initial={{ opacity: 0 }}
                         animate={{ opacity: task.checked ? 1 : 0 }}
                         transition={{ duration: 0.2 }}
@@ -118,7 +122,7 @@ const AnimatedChecklist = () => {
                       </motion.svg>
                     ) : (
                       <motion.div
-                        className="w-4 h-4 rounded-full bg-gray-600 dark:bg-gray-400"
+                        className="w-3 h-3 rounded-full bg-gray-600 dark:bg-gray-400"
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         transition={{ duration: 0.3 }}
