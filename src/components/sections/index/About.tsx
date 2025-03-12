@@ -43,42 +43,38 @@ export default function About() {
     { title: "Vercel", icon: <img alt="" draggable={false} className="h-6" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vercel/vercel-original.svg" />, link: "https://vercel.com/" },
   ]
 
-  const [presence, setPresence] = useState<Presence | null>(null);
+  const [presence, setPresence] = useState<any>(null);
   const [date, setDate] = useState(new Date());
-
-  useEffect(() => {
-    const socket = new WebSocket(`wss://api.aiden.gg/presence`)
   
-    const handleOpen = () => {
-      socket.send("Connection established")
-    }
+  useEffect(() => {
+    const socket = new WebSocket("wss://api.lanyard.rest/socket");
   
     const handleMessage = (event: MessageEvent) => {
-      if (event.data === "connected") return
-      if (event.data === "pong") return
-      setPresence(JSON.parse(event.data))
-    }
-
-    let ping = setInterval(() => {
-      socket.send("ping")
-    }, 10000)
+      const data = JSON.parse(event.data);
   
-    socket.addEventListener("open", handleOpen)
-    socket.addEventListener("message", handleMessage)
+      if (data.op === 0) {
+        setPresence(data.d);
+      }
+  
+      // Send heartbeat every 30 seconds
+      if (data.op === 1) {
+        socket.send(JSON.stringify({ op: 2, d: { subscribe_to_id: "376769581093617665" } }));
+      }
+    };
+  
+    socket.addEventListener("message", handleMessage);
   
     const timer = setInterval(() => {
-      setDate(new Date())
-    }, 1000)
+      setDate(new Date());
+    }, 1000);
   
     return () => {
-      socket.removeEventListener("open", handleOpen)
-      socket.removeEventListener("message", handleMessage)
-      socket.close()
-      clearInterval(ping)
-      clearInterval(timer)
-    }
-  }, [])
-
+      socket.removeEventListener("message", handleMessage);
+      socket.close();
+      clearInterval(timer);
+    };
+  }, []);
+  
   return (
     <>
       <section id='about' className="max-w-4xl w-full flex flex-col mx-auto">
@@ -127,16 +123,6 @@ export default function About() {
             delay={0.1}
             gradient="bg-gradient-to-tr"
           />
-          {presence && presence.activities.length > 0 &&
-            <PresenceCard
-              presence={presence}
-              date={date}
-              direction="bottom"
-              span={1}
-              delay={0.1}
-              gradient="bg-gradient-to-tl"
-            />
-          }
         </ul>
       </section>
     </>

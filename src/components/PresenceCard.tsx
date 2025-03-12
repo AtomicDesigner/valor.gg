@@ -25,7 +25,7 @@ export default function PresenceCard({ presence, date, direction, span, gradient
                         Currently Doing
                     </h2>
                     <p className="text-center text-xl mb-1.5">
-                        Below are the activities I am currently doing.
+                        Below are the activities I am currently doing..
                     </p>
                     <Divider />
                     <Carousel
