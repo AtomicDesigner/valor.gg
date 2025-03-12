@@ -20,7 +20,7 @@ const AnimatedChecklist = () => {
   }, []);
 
   return (
-    <section className="max-w-4xl w-full flex flex-col mx-auto pt-30">
+    <section className="max-w-4xl w-full flex flex-col mx-auto pt-35">
       <motion.div
         className="relative sm:p-12 p-6 w-full flex flex-col bg-gradient-to-br from-primary to to-secondary rounded-lg border-1 border-accent shadow-2xl shadow-background"
         initial={{ transform: "translateY(30px)", opacity: 0 }}
