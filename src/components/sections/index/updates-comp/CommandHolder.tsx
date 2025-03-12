@@ -17,7 +17,7 @@ export default function About() {
         >
           Noxum Commands
         </motion.h1>
-        <ul className="grid grid-cols-2 gap-4 mt-4 grid-flow-row-dense auto-rows-fr">
+        <ul className="grid grid-cols-2 gap-4 mt-4">
           <AboutCard
             title="What does Noxum offer?"
             description="Noxum has your back with simple yet powerful commands. It's commands ranges from basic moderation to in-depth clanning features."
