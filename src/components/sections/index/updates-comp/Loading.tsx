@@ -29,6 +29,7 @@ export default function Hero({ inView, descRef }: { inView: boolean, descRef: an
                   {perc}%
                 </span>
             </div>
+            <h1>zzz</h1>
         </motion.div>
       </section>
     </>
