@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+let perc: number = 35;
 
 export default function Hero({ inView, descRef }: { inView: boolean, descRef: any }) {
   return (
@@ -18,10 +19,10 @@ export default function Hero({ inView, descRef }: { inView: boolean, descRef: an
             <div className="mt-6 w-full bg-gray-700 rounded-full h-4 bg-gradient-to-r from-primary to-secondary rounded-lg border-1 border-accent shadow-2xl shadow-background relative">
             <div
               className="bg-white h-4 rounded-full"
-              style={{ width: `${inView ? '75%' : '0%'}` }}
+              style={{ width: `${inView ? `${perc}%` : '0%'}` }}
             ></div>
             <div className="absolute top-0 left-[75%] transform -translate-x-1/2 bg-white text-black px-2 py-1 rounded-full shadow-md">
-              {inView ? '75%' : '0%'}
+              {inView ? `${perc}%` : '0%'}
             </div>
             </div>
         </motion.div>
