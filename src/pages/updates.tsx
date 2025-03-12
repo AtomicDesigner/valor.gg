@@ -24,7 +24,7 @@ export default function Home() {
           className='z-[-5]'
         />
       </main>
-      <div className="mx-auto pt-10 space-y-8">
+      <div className="mx-auto pt-10 space-y-64">
         <Loader 
           inView={inView} 
           descRef={ref} 
