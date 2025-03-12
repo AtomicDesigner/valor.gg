@@ -37,6 +37,11 @@ export default function Navbar() {
                     <div className="flex flex-row items-center justify-between w-full">
                         <div className="flex flex-row gap-2 items-center">
                             <img alt="" draggable={false} className="h-10 w-10" src="/me.png" />
+                            <Link href="/index">
+                                <button className="p-2 duration-300 text-lg font-medium hover:bg-secondary rounded-md">
+                                    Home
+                                </button>
+                            </Link>
                             <button onClick={handleClickScroll} className="p-2 duration-300 text-lg font-medium hover:bg-secondary rounded-md">
                                 About
                             </button>
