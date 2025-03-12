@@ -43,11 +43,11 @@ export default function Navbar() {
                             <button onClick={handleClickScroll2} className="p-2 duration-300 text-lg font-medium hover:bg-secondary rounded-md">
                                 Experience
                             </button>
-                            <button onClick={handleClickScroll2} className="p-2 duration-300 text-lg font-medium hover:bg-secondary rounded-md">
+                            <button onClick={handleClickScroll2} disabled={true} className="p-2 duration-300 text-lg font-medium hover:bg-secondary rounded-md disabled:cursor-not-allowed disabled:bg-gray-400">
                                 Bot Updates
                             </button>
-                            <button
-                            onClick={handleClickScroll} disabled={true} className="p-2 duration-300 text-lg font-medium hover:bg-secondary rounded-md disabled:cursor-not-allowed disabled:bg-gray-400">
+                            <button onClick={handleClickScroll} disabled={true} className="p-2 duration-300 text-lg font-medium hover:bg-secondary rounded-md disabled:cursor-not-allowed disabled:bg-gray-400">
+                                Commands
                             </button>
                         </div>
                     </div>
