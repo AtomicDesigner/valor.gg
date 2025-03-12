@@ -1,5 +1,6 @@
 import AboutCard2 from "@/components/AboutCard2";
 import AboutCard from "@/components/AboutCard";
+import AboutCardTW from "@/components/AboutCardTW";
 import Typewriter from 'typewriter-effect';
 import { motion } from "framer-motion";
 
@@ -51,7 +52,7 @@ export default function About() {
                 { command: "/user info [user]", description: "Displays detailed information about the specified user." },
                 { command: "/servinfo", description: "Displays information about the server." }
             ]}
-            direction="left"
+            direction="top"
             span={1}
             delay={0.15}
             gradient="bg-gradient-to-br"
@@ -66,7 +67,7 @@ export default function About() {
                 { command: "/clearvouches [user]", description: "Clears all vouches for the specified user." },
                 { command: "/blast", description: "Nukes the server. (Troll Message, it's harmless lol.)" }
             ]}
-            direction="right"
+            direction="top"
             span={1}
             delay={0.2}
             gradient="bg-gradient-to-bl"
@@ -85,7 +86,7 @@ export default function About() {
                 { command: "/reassign vouch", description: "Reassigns the vouch role to a different role." },
                 { command: "/add mod", description: "Adds a role to the moderator database." }
             ]}
-            direction="left"
+            direction="top"
             span={1}
             delay={0.1}
             gradient="bg-gradient-to-tr"
@@ -96,31 +97,31 @@ export default function About() {
                 { command: "/ownerify [role]", description: "Gives the specified role full permissions in the server (Administrator)" },
                 { command: "/unownerify [role]", description: "Revoked the administrative permissions granted to the role." },
             ]}
-            direction="right"
+            direction="top"
             span={1}
             delay={0.1}
             gradient="bg-gradient-to-tr"
           />
-            <AboutCard
-                title="Noxum ModMail."
-                description="Noxum has your back with simple yet powerful commands. It's commands ranges from basic moderation to in-depth clanning features."
-                direction="top"
-                span={2}
-                delay={0.1}
-                gradient="bg-gradient-to-tl"
-                
-          />
-            <p className="font-semibold lg:text-3xl md:text-2xl sm:text-xl text-lg">
-              <Typewriter
+            <AboutCardTW
+            title="Noxum ModMail."
+            description={
+                <Typewriter
                 options={{
-                  delay: 20,
-                  strings: ["I am Noxum. A TSB (The Strongest Battlegrounds) clanning bot made to make clanning easier, developed by Valor."],
-                  loop: true,
-                  autoStart: true,
-                  deleteSpeed: 604800000,
+                    delay: 20,
+                    strings: [
+                    "I am Noxum. A TSB (The Strongest Battlegrounds) clanning bot made to make clanning easier, developed by Valor."
+                    ],
+                    loop: true,
+                    autoStart: true,
+                    deleteSpeed: 604800000
                 }}
-              />
-          </p>
+                />
+            }
+            direction="top"
+            span={2}
+            delay={0.1}
+            gradient="bg-gradient-to-tl"
+            />
         </ul>
       </section>
     </>
