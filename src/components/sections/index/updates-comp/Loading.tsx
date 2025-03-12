@@ -1,7 +1,4 @@
 import { motion } from "framer-motion";
-import Typewriter from 'typewriter-effect';
-
-import SocialIcon from "@/components/SocialIcon";
 
 export default function Hero({ inView, descRef }: { inView: boolean, descRef: any }) {
   return (
@@ -16,7 +13,7 @@ export default function Hero({ inView, descRef }: { inView: boolean, descRef: an
           ref={descRef}
         >
           <h2 className="font-bold lg:text-7xl md:text-6xl sm:text-5xl text-4xl">
-            Next bot update status:<span className="font-bold text-xl brightness-50 italic sm:inline flex"> best bot btw</span>
+            Next bot update status:
           </h2>
           <div className="mt-6 w-full bg-gray-200 rounded-full h-4 dark:bg-gray-700">
             <div
