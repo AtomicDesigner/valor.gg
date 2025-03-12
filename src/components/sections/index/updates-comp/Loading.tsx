@@ -29,10 +29,12 @@ export default function Hero({
             Next Update Progress:
           </h2>
           <div className="mt-6 w-full bg-gray-700 rounded-full h-4 relative bg-gradient-to-br from-primary to to-secondary rounded-lg border-1 border-accent shadow-2xl shadow-background">
-            <div
+            <motion.div
               className="bg-white h-4 rounded-full"
-              style={{ width: `${perc}%` }}
-            ></div>
+              initial={{ width: 0 }}
+              animate={{ width: `${perc}%` }}
+              transition={{ duration: 1 }}
+            ></motion.div>
             <span className="absolute left-1/2 transform -translate-x-1/2 mt-1 text-white font-bold">
               {perc}%
             </span>
