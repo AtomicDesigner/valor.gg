@@ -51,7 +51,7 @@ const AnimatedChecklist = () => {
         newState[1].tasks[0].checked = true;
         newState[1].tasks[1].checked = true;
         newState[1].tasks[2].checked = true;
-        newState[2].tasks[0].checked = false;
+        newState[2].tasks[0].checked = true;
         newState[3].tasks[0].checked = false;
         newState[3].tasks[1].checked = false;
         newState[3].tasks[2].checked = false;
