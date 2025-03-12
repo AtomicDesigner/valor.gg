@@ -41,7 +41,7 @@ export default function Navbar() {
                                 About
                             </button>
                             <button onClick={handleClickScroll2} className="p-2 duration-300 text-lg font-medium hover:bg-secondary rounded-md">
-                                Experience
+                                Credits
                             </button>
                             <button onClick={handleClickScroll2} disabled={true} className="p-2 duration-300 text-lg font-medium hover:bg-secondary rounded-md disabled:cursor-not-allowed">
                                 Bot Updates
