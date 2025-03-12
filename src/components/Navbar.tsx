@@ -50,7 +50,7 @@ export default function Navbar() {
                             </button>
                             <Link href="/updates">
                                 <button className="p-2 duration-300 text-lg font-medium hover:bg-secondary rounded-md">
-                                    Bot Updates
+                                    Updates
                                 </button>
                             </Link>
                             <button onClick={handleClickScroll} disabled={true} className="p-2 duration-300 text-lg font-medium hover:bg-secondary rounded-md disabled:cursor-not-allowed">
