@@ -23,7 +23,7 @@ export default function Hero({ inView, descRef }: { inView: boolean, descRef: an
               <Typewriter
                 options={{
                   delay: 20,
-                  strings: ["I am TSB (The Strongest Battlegrounds clanning bot made to make clanning easier, developed by Valor."],
+                  strings: ["I am Noxum. A TSB (The Strongest Battlegrounds) clanning bot made to make clanning easier, developed by Valor."],
                   loop: true,
                   autoStart: true,
                   deleteSpeed: 604800000,
