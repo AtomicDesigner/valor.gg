@@ -9,64 +9,67 @@ const AnimatedChecklist = () => {
       {
         category: "ModMail System",
         tasks: [
-          { name: "Set up basic ModMail functionality", checked: false },
-          { name: "Create ticket system for user inquiries", checked: false },
+          { name: "Set up basic ModMail functionality", checked: true },
+          { name: "Create ticket system for user inquiries", checked: true },
           { name: "Implement message logging", checked: false },
-          { name: "Add auto-response features", checked: false },
-          { name: "Set up staff notification system", checked: false },
+          { name: "Add auto-response features", checked: true },
+          { name: "Set up staff notification system", checked: true },
         ],
       },
       {
         category: "Cases Pages",
         tasks: [
-          { name: "Design case template structure", checked: false },
-          { name: "Implement case tracking system", checked: false },
-          { name: "Create case status updates", checked: false },
-          { name: "Add case assignment features", checked: false },
-          { name: "Set up case archiving system", checked: false },
+          { name: "Design case template structure", checked: true },
+          { name: "Implement case tracking system", checked: true },
+          { name: "Create case status updates", checked: true },
+          { name: "Add case assignment features", checked: true },
+          { name: "Set up case archiving system", checked: true },
         ],
       },
       {
         category: "Help Command",
         tasks: [
-          { name: "Create basic help menu structure", checked: false },
-          { name: "Write command documentation", checked: false },
-          { name: "Implement category system", checked: false },
-          { name: "Add search functionality", checked: false },
-          { name: "Create interactive help guides", checked: false },
+          { name: "Create basic help menu structure", checked: true },
+          { name: "Write command documentation", checked: true },
+          { name: "Implement category system", checked: true },
+          { name: "Add search functionality", checked: true },
+          { name: "Create interactive help guides", checked: true },
         ],
       },
       {
         category: "Tryout Results",
         tasks: [
-          { name: "Set up role assignment system", checked: false },
-          { name: "Create results tracking database", checked: false },
-          { name: "Implement feedback mechanism", checked: false },
+          { name: "Set up role assignment system", checked: true },
+          { name: "Create results tracking database", checked: true },
+          { name: "Implement feedback mechanism", checked: true },
           { name: "Add automated notifications", checked: false },
-          { name: "Create summary reports", checked: false },
+          { name: "Create summary reports", checked: true },
         ],
       },
     ];
   
+    // Initialize state based on the checklist data
     const [checklistState, setChecklistState] = useState(checklist);
   
+    // Set all tasks as checked immediately
     useEffect(() => {
-      setTimeout(() => {
-        setChecklistState((prevState) => {
-          const newState = [...prevState];
-          newState[0].tasks[2].checked = true;
-          return newState;
+      setChecklistState((prevState) => {
+        const newState = [...prevState];
+        newState.forEach((category) => {
+          category.tasks.forEach((task) => {
+            task.checked = true;
+          });
         });
-      }, 2000);
-  
-      setTimeout(() => {
-        setChecklistState((prevState) => {
-          const newState = [...prevState];
-          newState[3].tasks[3].checked = true;
-          return newState;
-        });
-      }, 2000);
+        return newState;
+      });
     }, []);
+  
+    // Toggle the checked state of a task
+    const toggleCheck = (categoryIndex: number, taskIndex: number) => {
+      const newChecklist = [...checklistState];
+      newChecklist[categoryIndex].tasks[taskIndex].checked = !newChecklist[categoryIndex].tasks[taskIndex].checked;
+      setChecklistState(newChecklist);
+    };
   
     return (
       <section className="max-w-4xl w-full flex flex-col mx-auto pt-44">
@@ -88,9 +91,9 @@ const AnimatedChecklist = () => {
             </h2>
             {checklistState.map((section, sectionIndex) => (
               <div key={sectionIndex} className="space-y-4">
-                <h2 className="font-bold text-xl text-gray-800 dark:text-gray-200">
+                <h3 className="font-bold text-xl text-gray-800 dark:text-gray-200">
                   {section.category}
-                </h2>
+                </h3>
                 {section.tasks.map((task, index) => (
                   <motion.div
                     key={index}
@@ -99,9 +102,34 @@ const AnimatedChecklist = () => {
                     transition={{ delay: index * 0.1 }}
                     className="flex items-center space-x-3 p-2 bg-gradient-to-br from-primary to to-secondary rounded-lg border-1 border-accent shadow-2xl shadow-background"
                   >
-                    <div className="w-5 h-5 flex items-center justify-center border-2 border-gray-600 dark:border-gray-400 rounded-md">
-                      {task.checked && <span className="text-green-500">✔</span>}
-                    </div>
+                    {/* Custom checkbox */}
+                    <motion.div
+                      className="w-6 h-6 flex items-center justify-center border-2 border-gray-600 dark:border-gray-400 rounded-md cursor-pointer"
+                      onClick={() => toggleCheck(sectionIndex, index)}
+                      initial={{ scale: 0 }}
+                      animate={{ scale: task.checked ? 1 : 0 }}
+                      transition={{ duration: 0.3 }}
+                    >
+                      {task.checked && (
+                        <motion.svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                          className="w-4 h-4 text-green-500"
+                          initial={{ opacity: 0 }}
+                          animate={{ opacity: task.checked ? 1 : 0 }}
+                          transition={{ duration: 0.2 }}
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth="2"
+                            d="M5 13l4 4L19 7"
+                          />
+                        </motion.svg>
+                      )}
+                    </motion.div>
                     <span className="text-gray-800 dark:text-gray-200">{task.name}</span>
                   </motion.div>
                 ))}

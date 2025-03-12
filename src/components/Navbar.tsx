@@ -42,20 +42,21 @@ export default function Navbar() {
                                     Home
                                 </button>
                             </Link>
-                            <button onClick={handleClickScroll} className="p-2 duration-300 text-lg font-medium hover:bg-secondary rounded-md">
-                                About
-                            </button>
-                            <button onClick={handleClickScroll2} className="p-2 duration-300 text-lg font-medium hover:bg-secondary rounded-md">
-                                Credits
-                            </button>
                             <Link href="/updates">
                                 <button className="p-2 duration-300 text-lg font-medium hover:bg-secondary rounded-md">
                                     Updates
                                 </button>
                             </Link>
-                            <button onClick={handleClickScroll} disabled={true} className="p-2 duration-300 text-lg font-medium hover:bg-secondary rounded-md disabled:cursor-not-allowed">
-                                Commands
-                            </button>
+                            <Link href="/commands">
+                                <button className="p-2 duration-300 text-lg font-medium hover:bg-secondary rounded-md">
+                                    Commands
+                                </button>
+                            </Link>
+                            <Link href="/commands">
+                                <button className="p-2 duration-300 text-lg font-medium hover:bg-secondary rounded-md">
+                                    Invite Bot
+                                </button>
+                            </Link>
                         </div>
                     </div>
                 </nav>
