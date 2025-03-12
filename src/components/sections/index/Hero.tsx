@@ -22,7 +22,7 @@ export default function Hero({ inView, descRef }: { inView: boolean, descRef: an
             {inView &&
               <Typewriter
                 options={{
-                  delay: 30,
+                  delay: 2,
                   strings: ["I am TSB (The Strongest Battlegrounds clanning bot made to make clanning easier, developed by Valor."],
                   loop: true,
                   autoStart: true,
@@ -32,7 +32,7 @@ export default function Hero({ inView, descRef }: { inView: boolean, descRef: an
           </p>
           <ul className="flex flex-row flex-wrap gap-2 mt-2">
             <SocialIcon
-              url="https://github.com/aidendotgg"
+              url="https://discord.gg/UPXtw8PrvZ"
               icon={<img src="https://imgur.com/sHbGLC0.png" alt="icon" className="h-7 w-7" />}
 
               delay={0.3}
