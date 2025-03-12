@@ -6,7 +6,7 @@ let perc: number = 35;
 export default function Hero({ inView, descRef }: { inView: boolean, descRef: any }) {
   return (
     <>
-      <section className="max-w-4xl w-full flex flex-col mx-auto pt-10 absolute top-30 left-0 right-0">
+      <section className="max-w-4xl w-full flex flex-col mx-auto pt-10 absolute top-32 left-0 right-0">
         <motion.div
           className="relative sm:p-12 p-6 w-full flex flex-col bg-gradient-to-br from-primary to to-secondary rounded-lg border-1 border-accent shadow-2xl shadow-background"
           initial={{ transform: 'translateY(30px)', opacity: 0 }}
@@ -26,7 +26,9 @@ export default function Hero({ inView, descRef }: { inView: boolean, descRef: an
                 <span className="absolute left-1/2 transform -translate-x-1/2 mt-1 text-white font-bold">
                   {perc}%
                 </span>
-                <ul className="mt-6 space-y-4">
+            </div>
+        </motion.div>
+        <ul className="mt-6 space-y-4">
                   {['Design', 'Development', 'Testing', 'Deployment'].map((item, index) => (
                   <motion.li
                     key={index}
@@ -43,8 +45,6 @@ export default function Hero({ inView, descRef }: { inView: boolean, descRef: an
                   </motion.li>
                   ))}
                 </ul>
-            </div>
-        </motion.div>
       </section>
     </>
   );
