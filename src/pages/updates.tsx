@@ -6,7 +6,7 @@ import About from "@/components/sections/index/About";
 import Experience from "@/components/sections/index/Experience";
 import Projects from "@/components/sections/index/Projects";
 import Footer from "@/components/sections/index/Footer";
-import Loading from "@/components/sections/index/loading";
+import Loading from "@/components/sections//index/loading";
 import { GridPattern } from "@/components/GridPattern";
 
 export default function Home() {
