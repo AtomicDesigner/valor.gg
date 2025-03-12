@@ -16,15 +16,15 @@ export default function About() {
   ]
 
   let backendTech: Tech[] = [
-    { title: "Judgements", icon: <img alt="" draggable={true} className="h-6" src="https://imgur.com/EHGfp6r.png" />, link: "https://discord.gg/jdg" },
+    { title: "Judgements", icon: <img alt="" draggable={true} className="h-6" src="https://imgur.com/EHGfp6r.png" />, link: "https://discord.gg/judgements" },
     { title: "EL", icon: <img alt="" draggable={true} className="h-6" src="https://imgur.com/TmzqdBy.gif" />, link: "https://discord.gg/RUuPQTxt5r" },
-    { title: "Judgements", icon: <img alt="" draggable={true} className="h-6" src="https://imgur.com/EHGfp6r.png" />, link: "https://discord.gg/jdg" },
+    { title: "Judgements", icon: <img alt="" draggable={true} className="h-6" src="https://imgur.com/EHGfp6r.png" />, link: "https://discord.gg/judgements" },
     { title: "EL", icon: <img alt="" draggable={true} className="h-6" src="https://imgur.com/TmzqdBy.gif" />, link: "https://discord.gg/RUuPQTxt5r" },
-    { title: "Judgements", icon: <img alt="" draggable={true} className="h-6" src="https://imgur.com/EHGfp6r.png" />, link: "https://discord.gg/jdg" },
+    { title: "Judgements", icon: <img alt="" draggable={true} className="h-6" src="https://imgur.com/EHGfp6r.png" />, link: "https://discord.gg/judgements" },
     { title: "EL", icon: <img alt="" draggable={true} className="h-6" src="https://imgur.com/TmzqdBy.gif" />, link: "https://discord.gg/RUuPQTxt5r" },
-    { title: "Judgements", icon: <img alt="" draggable={true} className="h-6" src="https://imgur.com/EHGfp6r.png" />, link: "https://discord.gg/jdg" },
+    { title: "Judgements", icon: <img alt="" draggable={true} className="h-6" src="https://imgur.com/EHGfp6r.png" />, link: "https://discord.gg/judgements" },
     { title: "EL", icon: <img alt="" draggable={true} className="h-6" src="https://imgur.com/TmzqdBy.gif" />, link: "https://discord.gg/RUuPQTxt5r" },
-    { title: "Judgements", icon: <img alt="" draggable={true} className="h-6" src="https://imgur.com/EHGfp6r.png" />, link: "https://discord.gg/jdg" },
+    { title: "Judgements", icon: <img alt="" draggable={true} className="h-6" src="https://imgur.com/EHGfp6r.png" />, link: "https://discord.gg/judgements" },
     { title: "EL", icon: <img alt="" draggable={true} className="h-6" src="https://imgur.com/TmzqdBy.gif" />, link: "https://discord.gg/RUuPQTxt5r" },
   ]
 
