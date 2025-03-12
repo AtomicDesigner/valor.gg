@@ -23,13 +23,11 @@ export default function Home() {
           y={-1}
           className='z-[-5]'
         />
-      </main>
-      <div className="mx-auto pt-10 space-y-64">
-        <Loader 
-          inView={inView} 
-          descRef={ref} 
-        />
+        <Loader inView={inView} descRef={ref} />
         <AnimatedChecklist />
+      </main>
+      <div className="mx-auto pt-10 space-y-56">
+        hello
       </div>
     </>
   );
