@@ -17,7 +17,7 @@ export default function About() {
         >
           Noxum Commands
         </motion.h1>
-        <ul className="grid grid-cols-2 gap-4 mt-4">
+        <ul className="grid grid-cols-2 gap-4 mt-4 grid-flow-row-dense auto-rows-fr">
           <AboutCard
             title="What does Noxum offer?"
             description="Noxum has your back with simple yet powerful commands. It's commands ranges from basic moderation to in-depth clanning features."
@@ -42,11 +42,11 @@ export default function About() {
                 { command: "/roleadd [user] [role]", description: "Adds the specified role to the specified user." },
                 { command: "/roleremove [user] [role]", description: "Removes the specified role from the specified user." },
                 { command: "/case_lookup [case ID]", description: "Retrieves information about a specific moderation case using its ID." },
-                { command: "/clrbulk [amount]", description: "Clears the last 1-100 messages specified in the command." },
-                { command: "/clr punish [user]", description: "Clears all punishments for the specified user." },
+                { command: "/purge [amount]", description: "Clears the last 1-100 messages specified in the command." },
+                { command: "/clr oopsies [user]", description: "Clears all punishments for the specified user." },
                 { command: "/clr cases [user]", description: "Clears all moderation cases for the specified user." },
-                { command: "/clr 1 punish [user] [case ID]", description: "Clears the moderation case matching the specified case ID." },
-                { command: "/punishments [user]", description: "Displays the current punishments applied to the specified user." },
+                { command: "/clr oops [user] [case ID]", description: "Clears the moderation case matching the specified case ID." },
+                { command: "/oopsies [user]", description: "Displays the current punishments applied to the specified user." },
                 { command: "/set nick [user] [nickname]", description: "Changes the nickname of the specified user." },
                 { command: "/roleinfo [role]", description: "Displays information about the specified role." },
                 { command: "/user info [user]", description: "Displays detailed information about the specified user." },
@@ -64,8 +64,8 @@ export default function About() {
                 { command: "/msg [message] [reply](optional)", description: "Makes the bot say whatever you want." },
                 { command: "/vouch [user]", description: "Gives a vouch to the specified user." },
                 { command: "/vouches [user]", description: "Displays the number of vouches a user has received." },
-                { command: "/clearvouches [user]", description: "Clears all vouches for the specified user." },
-                { command: "/blast", description: "Nukes the server. (Troll Message, it's harmless lol.)" }
+                { command: "/clr vouches [user]", description: "Clears all vouches for the specified user." },
+                { command: "/nuke", description: "Nukes the server. (Troll Message, it's harmless lol.)" }
             ]}
             direction="top"
             span={1}
@@ -109,7 +109,7 @@ export default function About() {
                 options={{
                     delay: 20,
                     strings: [
-                    "I am Noxum. A TSB (The Strongest Battlegrounds) clanning bot made to make clanning easier, developed by Valor."
+                    "Noxum ModMail is here to make sure no one feels unheard. If you ever need help, have a question, or want to talk to staff privately, just send a DM to Noxum. It’ll automatically open a support ticket, letting our team respond quickly and keep everything organized. No stress, no confusion — just simple, direct help when you need it."
                     ],
                     loop: true,
                     autoStart: true,
