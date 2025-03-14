@@ -134,8 +134,8 @@ export default function About() {
             delay={0.1}
             gradient="bg-gradient-to-tl"
             />
-        </ul>
-        <ProjectCard
+
+            <ProjectCard
             title="Noxem ModMail"
             fullDescription={[
               "Noxum ModMail is a newly made Ticket System for Discord servers. It allows users to create tickets by DMing the bot and staff to respond to them.",
@@ -151,6 +151,7 @@ export default function About() {
             delay={0.1}
             gradient="bg-gradient-to-t"
           />
+        </ul>
       </section>
     </>
   );
