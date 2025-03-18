@@ -14,7 +14,7 @@ export default function AboutCard({
   delay,
 }: {
   title: string;
-  description: { command: string; description: string }[];
+  description: { command: React.ReactNode; description: string }[];
   tech?: Tech[];
   direction: "top" | "bottom" | "left" | "right";
   span: 1 | 2;
@@ -25,7 +25,7 @@ export default function AboutCard({
     <motion.li
       className={`${
         span === 1 ? "min-[940px]:col-span-1 col-span-2" : "col-span-2"
-      } `}
+      }`}
       initial={{
         transform: `translate${
           direction === "top" || direction === "bottom" ? "Y" : "X"

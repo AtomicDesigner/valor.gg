@@ -91,7 +91,7 @@ export default function About() {
           <AboutCard2
             title="Clanning"
             description={[
-              { command: "/result [user] [stage] [level] [range]", description: "Displays the result of a recent tryout conducted with the specified person." },
+              { command: "<span style={{ color: 'red' }}>/create a system to start giveaways</span>", description: "Displays the result of a recent tryout conducted with the specified person." },
               { command: "/msg [message] [reply](optional)", description: "Makes the bot say whatever you want." },
               { command: "/vouch [user]", description: "Gives a vouch to the specified user." },
               { command: "/vouches [user]", description: "Displays the number of vouches a user has received." },

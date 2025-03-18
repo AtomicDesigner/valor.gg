@@ -6,37 +6,39 @@ const AnimatedChecklist = () => {
 
   const checklist = [
     {
-      category: "ModMail System",
+      category: "Giveaway Command",
       tasks: [
-        { name: "Set up basic ModMail functionality", checked: false },
-        { name: "Create ticket system for user inquiries", checked: false },
-        { name: "Add auto-response features", checked: false },
-        { name: "Set up staff notification system", checked: false },
+        { name: "Create a system to start giveaways", checked: false },
+        { name: "Set up user participation tracking", checked: false },
+        { name: "Add automatic winner selection", checked: false },
+        { name: "Design giveaway end notification system", checked: false },
       ],
     },
     {
-      category: "Cases Pages",
+      category: "Reassignment Commands",
       tasks: [
-        { name: "Design case template structure", checked: false },
-        { name: "Implement case tracking system", checked: false },
-        { name: "Create case status updates", checked: false },
+        { name: "Develop user role reassignment functionality", checked: false },
+        { name: "Implement role validation and checks", checked: false },
+        { name: "Add confirmation prompts before reassignment", checked: false },
+        { name: "Create a log for reassignment actions", checked: false },
+      ],
+    },
+    {
+      category: "Vouch Pages",
+      tasks: [
+        { name: "Design vouch page layout", checked: false },
+        { name: "Implement vouch submission system", checked: true },
+        { name: "Display vouch history for users", checked: false },
       ],
     },
     {
       category: "Help Commands",
       tasks: [
-        { name: "Commands will be in the website.", checked: false },
-      ],
-    },
-    {
-      category: "Tryout Results",
-      tasks: [
-        { name: "Set up role assignment system", checked: false },
-        { name: "Create results tracking database", checked: false },
-        { name: "Add automated notifications", checked: false },
+        { name: "Commands will be on the website.", checked: false },
       ],
     },
   ];
+  
 
   const [checklistState, setChecklistState] = useState(checklist);
 
@@ -44,17 +46,8 @@ const AnimatedChecklist = () => {
     setTimeout(() => {
       setChecklistState((prevState) => {
         const newState = [...prevState];
-        newState[0].tasks[0].checked = true;
-        newState[0].tasks[1].checked = true;
-        newState[0].tasks[2].checked = true;
-        newState[0].tasks[3].checked = true;
-        newState[1].tasks[0].checked = true;
-        newState[1].tasks[1].checked = true;
-        newState[1].tasks[2].checked = true;
-        newState[2].tasks[0].checked = true;
-        newState[3].tasks[0].checked = true;
-        newState[3].tasks[1].checked = true;
-        newState[3].tasks[2].checked = true;
+        // newState[0].tasks[0].checked = true;
+
         return newState;
       });
     }, 500);

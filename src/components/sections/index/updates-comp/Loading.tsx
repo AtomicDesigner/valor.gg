@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 
-let perc: number = 100;
+let perc: number = 5;
 
 export default function Hero({
   inView,
